@@ -1,0 +1,30 @@
+[
+    {
+        "name": "cmake",
+        "type": "custom",
+        "extensions": [".cmake"],
+        "files": ["CMakeLists.txt"],
+        "cmd": [
+            "python.exe",
+            "cmake-language-server/cmake_language_server/server.py"
+        ],
+        "dir": "$PROJ_DIR$",
+        "extraOptions": {
+            "cmakeExecutable": "R:/cmake3/bin/cmake.exe",
+            "buildDirectory" : "$PROJ_DIR$/.cmake_build/$PROJ_FNAME$"
+         },
+         "source": "https://github.com/regen100/cmake-language-server"
+    },
+    {
+        "name": "python",
+        "type": "custom",
+        "extensions": [".py"],
+        "cmd": [
+            "python.exe",
+            "jedi-language-server/main.py"
+        ],
+        "dir": "$PROJ_DIR$",
+        "source": "https://github.com/pappasam/jedi-language-server"
+        
+    }
+]
